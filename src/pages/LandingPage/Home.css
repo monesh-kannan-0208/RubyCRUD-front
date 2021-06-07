@@ -1,0 +1,33 @@
+body {
+    width: 100%;
+    margin-top: 0px;
+    /* background: rgb(107, 233, 3); */
+    background-image: linear-gradient(to right, rgb(255, 119, 244) , rgb(75, 110, 163));
+  }
+  
+  .type{
+    display: block;
+    color:rgb(255, 255, 255);
+    white-space: nowrap;  
+    letter-spacing: .05rem;
+    animation : typing 3s steps(60, end);
+    overflow: hidden;
+  }
+  @keyframes typing{
+    from {
+      width: 1%;
+    }
+    to{
+      width: 100%;
+    }
+  }
+  .homeBg {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10% 40% 0% 30%;
+  }
+  .cent{
+    text-align: center;
+  }
