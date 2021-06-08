@@ -77,7 +77,7 @@ const Profile = () => {
 
   if (edit) {
     return (
-      <div>
+      <div className="bodyc">
         <div className="signinForm">
           <div className="formHeader">
             <div className="headerTitle">Profile</div>
