@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./SignIn.css";
 import axios from "axios";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
   const [signinDetails, setsigninDetails] = useState({
@@ -26,6 +28,7 @@ const SignIn = () => {
         console.log(res.data);
         console.log(res.status);
         if (res.data.validation === "true") {
+          toast.success("login successful")
           console.log(res.data.validation);
           localStorage.setItem("userDetails", JSON.stringify(res.data));
           history.push("/profile");

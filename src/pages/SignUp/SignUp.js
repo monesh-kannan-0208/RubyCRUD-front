@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
-
+import { toast } from "react-toastify";
 import "./SignUp.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
   const [signupDetails, setsignupDetails] = useState({
@@ -31,6 +32,7 @@ const SignUp = () => {
         console.log(res.data);
         console.log(res.status);
         if (res.data.result === "Account Created") {
+          toast.success("Account Created successfully")
           history.push("/SignIn");
         } else {
           alert("Account exist with this email.");

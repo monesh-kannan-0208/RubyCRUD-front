@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = () => {
   const [edit, setedit] = useState(false);
@@ -33,6 +35,7 @@ const Profile = () => {
         console.log(res.data);
         console.log(res.status);
         if (res.data.updated === "true") {
+          toast.success("updated successfully")
           console.log(res.data.updated);
           localStorage.setItem("userDetails", JSON.stringify(res.data));
           history.push("/profile");
@@ -55,13 +58,14 @@ const Profile = () => {
     e.preventDefault();
     localStorage.removeItem("userDetails");
     history.push("/Home");
+    toast.success("SignOut successfully")
     return;
   };
 
   const deleteHandler = async (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:5000/DeleteProfile`, { profileDetails })
+      .post(`https://ruby-samp.herokuapp.com/DeleteProfile`, { profileDetails })
       .then((res) => {
         console.log(res);
         console.log(res.data);
@@ -69,6 +73,7 @@ const Profile = () => {
         if (res.data.deleted === "true") {
           console.log(res.data.deleted);
           localStorage.removeItem("userDetails");
+          toast.warn("deleted sucessfully")
           history.push("/Home");
         }
       });
@@ -77,7 +82,7 @@ const Profile = () => {
 
   if (edit) {
     return (
-      <div className="bodyc">
+      <div className="">
         <div className="signinForm">
           <div className="formHeader">
             <div className="headerTitle">Profile</div>
