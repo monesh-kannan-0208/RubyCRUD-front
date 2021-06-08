@@ -47,28 +47,30 @@ const SignUp = () => {
             <div className="formInputs">
               <form>
                 <label>Username</label>
-                <input type="text" name="name" onChange={onChangeHandler} />
+                <input type="text" name="name" onChange={onChangeHandler} required/>
                 <label>Email ID</label>
-                <input type="email" name="email" onChange={onChangeHandler} />
+                <input type="email" name="email" onChange={onChangeHandler} required/>
 
                 <label>Password</label>
                 <input
                   type="password"
                   name="password"
                   onChange={onChangeHandler}
+                  required
                 />
 
                 <label>Employee ID</label>
-                <input type="text" name="empcode" onChange={onChangeHandler} />
+                <input type="text" name="empcode" onChange={onChangeHandler} required/>
 
                 <label>Address</label>
-                <input type="text" name="address" onChange={onChangeHandler} />
+                <input type="text" name="address" onChange={onChangeHandler} required/>
 
                 <label>Date</label>
                 <input
                   type="date"
                   name="joiningdate"
                   onChange={onChangeHandler}
+                  required
                 />
                 <button type="submit" value="SUBMIT" onClick={onSubmitHandler}>
                   Sign Up

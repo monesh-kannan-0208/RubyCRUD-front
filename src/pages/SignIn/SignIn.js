@@ -43,13 +43,14 @@ const SignIn = () => {
             <div className="formInputs">
               <form>
                 <label>Email</label>
-                <input type="text" name="email" onChange={onChangeHandler} />
+                <input type="text" name="email" onChange={onChangeHandler} required/>
 
                 <label>Password</label>
                 <input
                   type="password"
                   name="password"
                   onChange={onChangeHandler}
+                  required
                 />
 
                 <button type="submit" value="SUBMIT" onClick={onSubmitHandler}>
