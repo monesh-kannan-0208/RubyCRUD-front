@@ -36,10 +36,10 @@ const SignIn = () => {
 
   return (
     <React.Fragment>
-      <div className="bgColor">
+      <div className="App-header">
         <div className="signinForm">
           <div className="formHeader">
-            <div className="headerTitle hoverCSS3">Sign In</div>
+            <div className="headerTitle hoverCSS3" style={{color:"black"}}>Sign In</div>
             <div className="formInputs">
               <form>
                 <label>Email</label>
@@ -57,13 +57,13 @@ const SignIn = () => {
                 </button>
                 <br></br>
                 <div className="formFoot">
-                  <Link to="/ForgotPassword" className="LinkColor">
+                  <Link to="/ForgotPassword" style={{color:"black"}} className="LinkColor">
                     Forgot Password ?
                   </Link>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <br></br>
                   <br></br>
-                  <Link to="/SignUp" className="LinkColor">
+                  <Link to="/SignUp" style={{color:"black"}} className="LinkColor">
                     New User ?
                   </Link>
                 </div>

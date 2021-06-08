@@ -40,10 +40,10 @@ const SignUp = () => {
   };
   return (
     <React.Fragment>
-      <div className="bgColor">
+      <div className="App-header">
         <div className="signupForm">
           <div className="formHeader">
-            <div className="headerTitle hoverCSS3">Sign Up</div>
+            <div className="headerTitle hoverCSS3" style={{color:"black"}}>Sign Up</div>
             <div className="formInputs">
               <form>
                 <label>Username</label>
@@ -74,7 +74,7 @@ const SignUp = () => {
                   Sign Up
                 </button>
                 <div>
-                  <Link className="LinkColor" to="/SignIn">
+                  <Link style={{color:"black"}} className="LinkColor" to="/SignIn">
                     Have an account ?
                   </Link>
                 </div>

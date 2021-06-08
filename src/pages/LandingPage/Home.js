@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import land from '../../assets/5417439.jpg'
 
 const Home = () => {
   const onload = async (e) => {
@@ -13,7 +14,11 @@ const Home = () => {
   };
   return (
     <div className="cent">
-      <h2 className="type">EMPLOYEE RUBY CRUD</h2>
+      <div>
+        <img src={land} width="50%" alt="land"/>
+      </div>
+      <div className="">
+      <h2 className=""  style={{color:"Black"}}>EMPLOYEE RUBY CRUD</h2>
       <div className="homeButtons">
         <div className="buttonSignin">
           <Link to="/SignUp">
@@ -27,6 +32,8 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

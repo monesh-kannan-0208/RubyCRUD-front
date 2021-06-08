@@ -2,7 +2,8 @@ body {
     width: 100%;
     margin-top: 0px;
     /* background: rgb(107, 233, 3); */
-    background-image: linear-gradient(to right, rgb(255, 119, 244) , rgb(75, 110, 163));
+    /* background-image: linear-gradient(to right, rgb(255, 119, 244) , rgb(75, 110, 163)); */
+    background-color: #d8f4ff;
   }
   
   .type{
@@ -30,4 +31,5 @@ body {
   }
   .cent{
     text-align: center;
+    justify-content: center;
   }
