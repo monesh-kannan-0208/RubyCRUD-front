@@ -6,7 +6,7 @@ import land from '../../assets/5417439.jpg'
 
 const Home = () => {
   const onload = async (e) => {
-    axios.get(`http://localhost:5000/`).then((res) => {
+    axios.get(`https://ruby-samp.herokuapp.com/`).then((res) => {
       console.log(res);
       console.log(res.data);
     });
